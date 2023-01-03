@@ -1,0 +1,47 @@
+:root {
+    --grey: #393939;
+    --blue: #1c57b7;
+  }
+  
+body {
+    background-color: var(--blue);
+  }
+
+.anchor-brand {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+}
+
+
+.bg-brand {
+    background-color: rgb(136, 136, 137);
+}
+
+.card-body {
+    background-color: rgb(136, 136, 137);
+}
+
+.btn  {
+    background-color: var(--grey);
+    color: white;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--grey);
+    border: solid thin var(--grey);
+}
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand img {
+    max-height: 100%;
+}
+
+h2, h3 {
+    color: white;
+}
