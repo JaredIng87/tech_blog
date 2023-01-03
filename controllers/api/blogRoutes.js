@@ -4,7 +4,11 @@ const withAuth = require('../../utils/auth');
 
 
 router.post('/', (req, res) => {
-  Blog.create(req.body)
+  Blog.create({
+    title: req.body.title,
+    blogText: req.body.text,
+    member_id: req.session.member_id
+  })
     .then((newBlog) => {
       res.json(newBlog);
     })
@@ -12,25 +16,6 @@ router.post('/', (req, res) => {
       res.json(err);
     });
 });
-
-/*router.post('/add', withAuth, async (req, res) => {
-  try {
-    const addedBlog = await Blog.create;
-    {
-      member_id: req.session.member_id,
-    },
-    {
-      where: {
-        id: req.body.blogID
-      }
-    });
-
-    res.status(200).json(addedBlog);
-  } catch (err) {
-    console.log(err);
-    res.status(400).json(err);
-  }
-});*/
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
