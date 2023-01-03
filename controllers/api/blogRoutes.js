@@ -3,19 +3,14 @@ const { Blog } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-router.post('/add', async (req, res) => {
-  try {
-    const blogData = await Blog.create(req.body);
-
-    req.session.save(() => {
-      req.session.member_id = memberData.id;
-      req.session.logged_in = true;
-
-      res.status(200).json(blogData);
+router.post('/', (req, res) => {
+  Blog.create(req.body)
+    .then((newBlog) => {
+      res.json(newBlog);
+    })
+    .catch((err) => {
+      res.json(err);
     });
-  } catch (err) {
-    res.status(400).json(err);
-  }
 });
 
 /*router.post('/add', withAuth, async (req, res) => {
