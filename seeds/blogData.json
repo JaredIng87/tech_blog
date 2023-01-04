@@ -1,13 +1,9 @@
 [
     {
 
-        "title": "Korinna Blend",
-        "blogText": "Bold blend of Mexican Coatepec, Costa Rican and French Colombian beans.",
+        "title": "This App is Unfinished",
+        "blogText": "I still have to include a comment feature for blog posts.",
         "member_id": 1
-    },
-    {
-        "title": "Marissa Blend",
-        "blogText": "A well balanced blend of Ethiopian Mocha and Java Mountain Supreme.",
-        "member_id" : 1 
     }
+
 ]
