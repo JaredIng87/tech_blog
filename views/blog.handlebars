@@ -1,9 +1,12 @@
-<div class="col col-md-3 mt-2">
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{blog.title}}</h5>
-      <p class="card-text">{{blog.blogText}}</p>
-      <!--<a href="#" class="btn btn-primary">Add comment</a>-->
-    </div>
+<div class="col col-md-3 mt-2 drink-list">
+<div class="card text-center" style="width: 16rem;">
+  <div class="card-body">
+    <h5 class="card-title" id="blog-title">{{blog.title}}</h5>
+    <p class="card-title" id="blog-subtitle">Posted by {{blog.member_id}}</p>
+    <p class="card-text" id="blog-blogtext">{{blog.blogText}}</p>
+    <button data-id="{{blog.id}}" class="btn viewPostBtn" type="submit">View Post</button>
   </div>
 </div>
+</div>
+
+<!--<script src="./js/homepage.js"></script>-->
