@@ -4,11 +4,11 @@ const viewPostHandler = async (event) => {
   event.preventDefault();
 
 
-  const blogID = event.target.getAttribute('data-id');
+  let blogID = event.target.getAttribute('data-id');
 
   if (blogID) {
     
-      document.location.replace('/blog/1');
+      document.location.replace(`/blog/${blogID}`);
   }
 };
 
